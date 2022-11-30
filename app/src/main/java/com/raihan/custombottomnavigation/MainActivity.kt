@@ -22,11 +22,11 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
         main_view_pager = findViewById(R.id.main_view_pager)
 
-        navController = Navigation.findNavController(this, R.id.activity_main_nav_host_fragment)
-        setupWithNavController(bottomNavigationView, navController)
+         navController = Navigation.findNavController(this, R.id.activity_main_nav_host_fragment)
+         setupWithNavController(bottomNavigationView, navController)
         bottomNavigationView.itemIconTintList = null
 
-        // viewPagerAdapter = ViewPagerAdapter(supportFragmentManager)
-        //  main_view_pager.adapter = viewPagerAdapter
+        viewPagerAdapter = ViewPagerAdapter(supportFragmentManager)
+        main_view_pager.adapter = viewPagerAdapter
     }
 }
